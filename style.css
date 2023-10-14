@@ -33,6 +33,11 @@ body, html {
 
 .right{
     justify-content: space-between;
+    gap: 10px;
+}
+
+.secLeft{
+    padding: 6.5px;
 }
 .excalidraw-app{
 
@@ -42,22 +47,47 @@ body, html {
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    /* content: normal; */
     justify-content: space-between;
 }
 
-  .dropDownMenuBtn svg {
-    width: 24px; /* Set the desired width */
-    height: 24px; /* Set the desired height */
-    stroke: black; /* Set the color of the lines */
-    stroke-width: 1; /* Set the line width */
-    fill: none; /* Ensure that the icon is not filled */
-  }
-  
+
+.ilandAppToolBar{
+    border: 0px solid rgb(141, 136, 136);
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.app-menu-left{
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.903);
+    padding: 1px;
+    color: rgb(0, 0, 0);
+    
+}
+.join{
+    background-color: #5b57d1 !important;
+    color: white !important;
+}
+.zoom{
+    gap: 10px;
+    color: black !important;
+}
+.veri-color{
+    fill: #5b57d1 !important;
+    color: #1811ee;
+}
+.que-icon{
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.903);
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    font-size: small;
+}
   /* Optional: Add a hover effect for the button */
-  .dropDownMenuBtn:hover {
-    background-color: lightgray;
-  }
   footer {
     position: fixed;
     bottom: 0;
@@ -69,3 +99,18 @@ body, html {
     bottom: 50px;
     right: 50px;
   }
+
+
+
+  .HintViewer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding-top: -50px;
+
+  }
+
+
+  
