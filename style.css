@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+#root{
+    height: 100%;
+    user-select: none;
+}
+.ToolIcon__icon>svg{
+    width: 25px;
+    height:25px;
+}
+.vertical-line{
+    border-left: 2px solid #f2f2f2;
+    height: 30px;
+}
+.ToolIcon__icon>div>svg{
+    width: 25px;
+    height:25px;
+}
+.ToolIcon__keybinding{
+    color: rgb(195, 193, 193);
+
+}
+.stackHorizontal{
+   background-color: white;
+   
+}
+
+.right{
+    justify-content: space-between;
+}
+.excalidraw-app{
+
+}
+.fixedSideContainer{
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* content: normal; */
+    justify-content: space-between;
+}
+
+  .dropDownMenuBtn svg {
+    width: 24px; /* Set the desired width */
+    height: 24px; /* Set the desired height */
+    stroke: black; /* Set the color of the lines */
+    stroke-width: 1; /* Set the line width */
+    fill: none; /* Ensure that the icon is not filled */
+  }
+  
+  /* Optional: Add a hover effect for the button */
+  .dropDownMenuBtn:hover {
+    background-color: lightgray;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #bottom-right {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
