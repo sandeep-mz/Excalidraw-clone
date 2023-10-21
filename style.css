@@ -23,6 +23,10 @@ body, html {
     cursor: pointer;
 }
 
+.ToolIcon__icon :hover{
+    border-radius: 5px;
+    background-color: #c5c4ea;
+}
 /* Style for vertical separator lines */
 .vertical-line {
     border-left: 2px solid #f2f2f2;
