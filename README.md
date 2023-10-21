@@ -7,7 +7,7 @@ The goal of this project is to create a clone of the Excalidraw website within a
 For design and functionality inspiration, we will be using the [Excalidraw](https://excalidraw.com/) as a reference.
 
 ## Project Status
-This project is currently under development and is a work in progress You can check here [Excalidraw](https://sandeep-mz.github.io/Excalidraw-clone/) . Tasks are scheduled to be completed within a three-week timeframe, with weekly updates on our progress. Please check back regularly for the latest updates and contributions.
+This project is currently under development and is a work in progress [Excalidraw](https://sandeep-mz.github.io/Excalidraw-clone/) . Tasks are scheduled to be completed within a three-week timeframe, with weekly updates on our progress. Please check back regularly for the latest updates and contributions.
 
 ## Components
 The Excalidraw User Interface (UI) can conveniently be divided into different sections to create a clone. Here's a list of the various sections we will consider when breaking down the entire clone into components:
