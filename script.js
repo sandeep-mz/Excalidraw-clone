@@ -5,7 +5,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = 1550; // Set the width in pixels
 canvas.height = 740; // Set the height in pixels
 
-// Set the drawing properties (e.g., line color, width)
+// Set the drawing properties (e.g., line color, width)x    
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 2;
 
@@ -35,3 +35,35 @@ function draw(e) {
     ctx.stroke();
     [lastX, lastY] = [x, y];
 }
+
+
+const zoomActionButtons = document.querySelectorAll('.zoom-action');
+const zoomLevelText = document.getElementById('zoomLevel');
+
+let zoomLevel = 100; // Initial zoom level (100%)
+
+// Function to update the zoom level and display it
+function updateZoom() {
+    zoomLevelText.textContent = zoomLevel + '%';
+}
+
+// Add event listeners to the zoom action buttons
+zoomActionButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const action = this.getAttribute('data-action');
+        if (action === 'in') {
+            zoomLevel += 10; // Increase zoom level by 10%
+        } else if (action === 'out') {
+            zoomLevel -= 10; // Decrease zoom level by 10%
+        }
+
+        if (zoomLevel < 10) {
+            zoomLevel = 10; // Set a minimum zoom level
+        }
+
+        updateZoom();
+    });
+});
+
+// Initial update
+updateZoom();
