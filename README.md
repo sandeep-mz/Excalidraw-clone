@@ -4,7 +4,7 @@
 The goal of this project is to create a clone of the Excalidraw website within a span of three weeks.
 
 ## UI Reference
-For design and functionality inspiration, we will be using the [Excalidraw website](https://excalidraw.com/) as a reference.
+For design and functionality inspiration, we will be using the [Excalidraw](https://excalidraw.com/) as a reference.
 
 ## Project Status
 This project is currently under development and is a work in progress. Tasks are scheduled to be completed within a three-week timeframe, with weekly updates on our progress. Please check back regularly for the latest updates and contributions.
