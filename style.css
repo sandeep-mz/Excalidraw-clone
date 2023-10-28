@@ -1,144 +1,349 @@
-/* Reset default margin and padding for body and html */
-body, html {
+* {
     margin: 0;
     padding: 0;
-    -webkit-text-size-adjust: 100%;
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    font-family: Assistant, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif;
     overflow: hidden;
-    
-    background-color: #f2f2f2;
-}
-
-/* Set the root container to take the full height and disable user-select */
-#root {
-    height: 100%;
     user-select: none;
 }
 
-/* Style for icons in the toolbar */
-.ToolIcon__icon>svg {
-    width: 20px;
-    height: 18px;
+
+
+.active {
+    background-color: #e3e2fe !important;
+    transition: all .2s ease-in-out;
+}
+
+.active > i{
+    color: #6965db !important;
+}
+
+#main h1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 5vw;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: fixed;
+    top: 20px;
+}
+
+.tool-box{
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #eeeeee;
+}
+
+.tool-box .tool-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 5px;
+}
+
+.hr_divider{
+    width: 1px;
+    height: 1.5rem;
+    align-self: center;
+    background-color: #d6d6d6;
+    margin: 0 0.25rem;
+}
+
+.tool{
+    padding: 12px;
+    display: flex;
+    border-radius: 8px;
     cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
 }
 
-.ToolIcon__icon :hover{
-    border-radius: 5px;
-    background-color: #c5c4ea;
-}
-/* Style for vertical separator lines */
-.vertical-line {
-    border-left: 2px solid #f2f2f2;
-    height: 30px;
+.tool:hover{
+    background-color: #f5f5f5;
 }
 
-/* Style for keybinding text */
-.ToolIcon__keybinding {
-    color: rgb(185, 183, 183);
+.tool i{
+    color: #343437;
+    font-size: 14px;
+}
+
+.tool .diamond {
+    transform: rotate(45deg);
+}
+
+.tool > span {
     font-size: 10px;
-}
-
-/* Style for the stackHorizontal toolbar */
-.stackHorizontal {
-    background-color: white;
-}
-
-/* Right-aligned content in the fixedSideContainer */
-.right {
-    justify-content: space-between;
-    gap: 10px;
-}
-
-/* Styles for the sidebar-trigger container */
-.secLeft {
-    padding: 6.5px;
-}
-
-/* Container for the fixed side menu and toolbar */
-.fixedSideContainer {
-    margin: 5px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    justify-content: space-between;
-}
-
-/* Style for ilandAppToolBar */
-.ilandAppToolBar {
-    border: 0px solid rgb(141, 136, 136);
-    border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Style for the left app menu icon */
-.app-menu-left {
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.903);
-    padding: 1px;
-    color: rgb(0, 0, 0);
-}
-.rounded,.material-symbols-outlined{
-    cursor: pointer;  
-}
-/* Style for the "Join" button */
-.join {
-    background-color: #5b57d1 !important;
-    color: white !important;
-}
-
-/* Style for the zoom-related buttons and separators */
-.zoom {
-    gap: 10px;
-    color: black !important;
-}
-
-/* Style for verified user icon */
-.veri-color {
-    fill: #5b57d1 !important;
-    color: #1811ee;
-}
-
-/* Style for the help icon and text */
-.que-icon {
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.903);
-    padding: 5px;
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
-    font-size: small;
-}
-
-/* Optional: Add a hover effect for the button */
-footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    left: 0;
+    left: 26px;
+    color: #bbbbbb;
 }
 
-#bottom-right {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
+.menu button,
+.btn button {
+    outline: none;
+    border: 1px solid #eeeeee;
+    padding: 0.8rem;
+    display: flex;
+    border-radius: 10px;
+    background-color: #ececf4;
 }
 
-/* HintViewer styles */
-.HintViewer {
+.menu button > i{
+    color: #555555;
+    font-size: 14px;
+}
+
+.menu button:hover,
+.btn button:hover{
+    background-color: hsl(244, 100%, 97%);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn .user {
+    padding: 0.9rem;
+    color: #ffffff;
+    background-color: #6965db;
+}
+.btn .lib{
+    color: #8f8f8f;
+ }
+
+.btn .user:hover {
+    background-color: #5b57d1;
+}
+
+/* color palette css */
+
+.color-palette{
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    width: 249px;
+    background-color: red;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: fixed;
+    top: 100px;
+    left: -250px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.stroke .options{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stroke .option{
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+} 
+
+.stroke .option:nth-child(1){
+    background-color: #000;
+}
+.stroke .option:nth-child(2){
+    background-color: #e03131;
+}
+.stroke .option:nth-child(3){
+    background-color: #2f9e44;
+}
+.stroke .option:nth-child(4){
+    background-color: #1971c2;
+}
+.stroke .option:nth-child(5){
+    background-color: #f08c00;
+}
+.stroke .option:nth-child(7){
+    background-color: #000;
+}
+
+.bg-color .options{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.bg-color .option{
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 3px;
+} 
+
+.bg-color .option:nth-child(1){
+    background-color: #000;
+}
+.bg-color .option:nth-child(2){
+    background-color: #ffc9c9;
+}
+.bg-color .option:nth-child(3){
+    background-color: #b2f2bb;
+}
+.bg-color .option:nth-child(4){
+    background-color: #a5d8ff;
+}
+.bg-color .option:nth-child(5){
+    background-color: #ffec99;
+}
+.bg-color .option:nth-child(7){
+    background-color: #000;
+}
+
+.option #color-picker, 
+.option #bgColor-picker{
+    opacity: 0;
+}
+
+.stroke-width {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.stroke-width button {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #ececf4;
+}
+
+.stroke-width button:hover {
+    background-color: hsl(244, 100%, 97%);
+}
+
+.stroke-width button > i{
+    display: block;
+}
+
+/* footer css */
+
+#foot {
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    padding-inline: 1rem;
+    bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .foot-left {
+    display: flex;
+    gap: 1rem;
+  }
+  .zoom-div {
+    height: 36px;
+    background-color: #ececf4;
+    border-radius: 8px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
-    padding-top: -50px;
-}
-
-/* Customize canvas style as needed */
-canvas {
-    background-color: white;
-    cursor: crosshair;
-}
-
+  }
+  .percentage:hover,
+  .decrease:hover,
+   .increase:hover,
+    .undo:hover,
+     .redo:hover,
+     .help:hover {
+    background-color: hsl(244, 100%, 97%);
+  }
+  .decrease,
+  .increase {
+      font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+  }
+  .decrease {
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+  }
+  .increase {
+    height: 100%;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .percentage {
+    padding-inline: 10px;
+    color: var(--text-color);
+    font-size: 14px;
+  }
+  .undo-redo-div {
+    height: 36px;
+    font-size: 12px;
+    background-color: #ececf4;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .undo {
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+  }
+  .redo {
+    width: 36px;
+    height: 100%;
+    border-left: 1px solid var(--grey-border);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .foot-right {
+    display: flex;
+    gap: 1rem;
+  }
+  .encript {
+    height: 36px;
+    width: 36px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    font-size: 13px;
+    background-color: #ececf4;
+    border-radius: 8px;
+    cursor: pointer;
+  }
